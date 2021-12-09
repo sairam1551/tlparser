@@ -75,8 +75,7 @@ if __name__ == '__main__':
     .reportview-container {{
         background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
     }}
-    </style>
-    """,
+    </style>""",
     unsafe_allow_html=True
     )
 
@@ -86,4 +85,4 @@ if __name__ == '__main__':
         call_data = Timespent()
         file_data  = call_data.fileRead(inputFilename =line)
         call_data.main(Data_i=file_data)
-        
+
