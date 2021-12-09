@@ -66,6 +66,7 @@ class Timespent:
         else:
             st.write("Time Log not in the file : ", fname)
 if __name__ == '__main__':
+    st.sidebar.write("Welcome to the web app")
     st.title("Webapp for tl Parser")
     main_bg = "4397636.jpg"
     main_bg_ext = "jpg"
