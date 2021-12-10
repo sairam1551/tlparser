@@ -3,7 +3,6 @@ import datetime
 import time
 import streamlit as st
 import base64
-import re
 
 class Timespent:
     def TimeTotal(self,time_data):
@@ -38,12 +37,14 @@ class Timespent:
         except ValueError:
             return "N"
     def main(self,Data_i):
-        cl_initial = '2/23/12: 9:10pm - 11:40pm getting familiar with Flash'
+        cl_initial = ''
         ftd = []
         for currentline, ldata in enumerate(Data_i):
             if ldata.strip('\n').count("Time Log"):
                 cl_initial = currentline
                 break
+            else:
+                cl_initial = 'TimeLog'
         if cl_initial != "TimeLog":
             for iv in range(int(cl_initial), len(Data_i)):
                 fsd = (Data_i[iv].split(' - ')[0].split())
@@ -56,12 +57,14 @@ class Timespent:
                         if timeformatstatus_v1 == "Y" and timeformatstatus == "Y":
                             ftd.append((fsd[-1], str(ssd[0].split()[0])))
                     else:
+
                         st.write("Time stamp not present in the line: ", iv + 1)
                 else:
+
                     st.write("No time stamp present in the line: ", iv + 1)
             self.TimeTotal(ftd)
         else:
-            st.write("Time Log not in the file : ", line)
+            st.write("Time Log not in the file : ", fname)
 if __name__ == '__main__':
     st.title("Webapp for tl Parser")
     main_bg = "4397636.jpg"
