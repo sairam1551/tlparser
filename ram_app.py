@@ -40,14 +40,8 @@ class Timespent:
         cl_initial = 0
         ftd = []
         colist = Data_i.split("\n");
-        for currentline, ldata in enumerate(Data_i):
-            if ldata.strip('\n').count("Time Log"):
-                cl_initial = currentline
-                break
-            else:
-                cl_initial = 'TimeLog'
         if cl_initial != "TimeLog":
-            for iv in range(0, 69):
+            for iv in range(int(cl_initial), len(colist)):
                 fsd = (Data_i[iv].split(' - ')[0].split())
                 ssd = (Data_i[iv].split(' - ')[1:])
                 counter = (Data_i[iv].split(' - ')[1:])
