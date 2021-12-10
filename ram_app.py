@@ -46,19 +46,18 @@ def main(line):
 
 if __name__ == '__main__':
    st.title("Webapp for tl Parser")
-    main_bg = "4397636.jpg"
-    main_bg_ext = "jpg"
-    st.markdown(
-    f"""
-    <style>
-    .reportview-container {{
+   main_bg = "4397636.jpg"
+   main_bg_ext = "jpg"
+   st.markdown(
+   f"""
+   <style>
+   .reportview-container {{
         background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
-    }}
-    </style>""",
-    unsafe_allow_html=True
-    )
-
-    file = st.file_uploader(" Upload the TimeLog file here")
-    if st.button("Generate"):
+   }}
+   </style>""",
+   unsafe_allow_html=True
+   )
+   file = st.file_uploader(" Upload the TimeLog file here")
+   if st.button("Generate"):
         line = str(file.read(),"utf-8")
         main(line)
