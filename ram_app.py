@@ -57,6 +57,7 @@ class Timespent:
                 else:
 
                     st.write("No time stamp present in the line: ", iv + 1)
+                    st.write(ftd)
             self.TimeTotal(ftd)
         else:
             st.write("Time Log not in the file : ", Data_i)
