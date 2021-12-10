@@ -74,7 +74,7 @@ if __name__ == '__main__':
     unsafe_allow_html=True
     )
 
-    file = st.file_uploader(" Upload the TimeLog file here")
+    file = st.file_uploader(" Upload the Time Log file here")
     if st.button("Generate"):
         line = str(file.read(),"utf-8")
         call_data = Timespent()
