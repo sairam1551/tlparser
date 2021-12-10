@@ -37,7 +37,7 @@ class Timespent:
         except ValueError:
             return "N"
     def main(self,Data_i):
-        cl_initial = 0
+        cl_initial = 1
         ftd = []
         colist = Data_i.split("\n");
         if cl_initial != "TimeLog":
@@ -59,7 +59,7 @@ class Timespent:
                     st.write("No time stamp present in the line: ", iv + 1)
             self.TimeTotal(ftd)
         else:
-            st.write("Time Log not in the file : ", len(colist))
+            st.write("Time Log not in the file : ", Data_i)
 if __name__ == '__main__':
     st.title("Webapp for tl Parser")
     main_bg = "4397636.jpg"
