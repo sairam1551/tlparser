@@ -37,15 +37,9 @@ class Timespent:
         except ValueError:
             return "N"
     def main(self,Data_i):
-        cl_initial = ''
+        cl_initial = 0
         ftd = []
         colist = Data_i.split("\n");
-        for currentline, ldata in enumerate(Data_i):
-            if colist.strip('\n').count("Time Log"):
-                cl_initial = currentline
-                break
-            else:
-                cl_initial = 'TimeLog'
         if cl_initial != "TimeLog":
             for iv in range(int(cl_initial), len(colist)):
                 fsd = (colist[iv].split(' - ')[0].split())
