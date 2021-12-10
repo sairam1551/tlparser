@@ -53,13 +53,13 @@ class Timespent:
                             ftd.append((fsd[-1], str(ssd[0].split()[0])))
                     else:
 
-                        st.write("Time stamp not present in the line: ", iv + 1)
+                        st.write("Time stamp not present in the line:  ", iv + 1)
                 else:
 
-                    st.write("No time stamp present in the line: ", iv + 1)
+                    st.write("No time stamp present in the line:  ", iv + 1)
             self.TimeTotal(ftd)
         else:
-            st.write("Time Log not in the file : ", Data_i)
+            st.write("Time Log not in the file :  ", Data_i)
 if __name__ == '__main__':
     st.title("Web App for TL Parser")
     main_bg = "main.jpg"
