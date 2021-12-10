@@ -2,7 +2,7 @@ import sys
 import re
 
 
-def main():
+def main(line):
   fileName = sys.argv[1]
   with open(fileName) as f:
     lines = f.readlines()
@@ -45,4 +45,20 @@ def main():
     print("Total time author spent : " + str(timeElapsedInMinutes//60) +" hrs " + str(timeElapsedInMinutes%60) + " minutes")
 
 if __name__ == '__main__':
-    main()
+   st.title("Webapp for tl Parser")
+    main_bg = "4397636.jpg"
+    main_bg_ext = "jpg"
+    st.markdown(
+    f"""
+    <style>
+    .reportview-container {{
+        background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
+    }}
+    </style>""",
+    unsafe_allow_html=True
+    )
+
+    file = st.file_uploader(" Upload the TimeLog file here")
+    if st.button("Generate"):
+        line = str(file.read(),"utf-8")
+        main(line)
