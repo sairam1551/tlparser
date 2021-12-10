@@ -39,6 +39,13 @@ class Timespent:
     def main(self,Data_i):
         cl_initial = 0
         ftd = []
+        colist = Data_i.split("\n");
+        for currentline, ldata in enumerate(Data_i):
+            if ldata.strip('\n').count("Time Log"):
+                cl_initial = currentline
+                break
+            else:
+                cl_initial = 'TimeLog'
         if cl_initial != "TimeLog":
             for iv in range(0, 69):
                 fsd = (Data_i[iv].split(' - ')[0].split())
@@ -58,7 +65,7 @@ class Timespent:
                     st.write("No time stamp present in the line: ", iv + 1)
             self.TimeTotal(ftd)
         else:
-            st.write("Time Log not in the file : ", len(Data_i))
+            st.write("Time Log not in the file : ", colist)
 if __name__ == '__main__':
     st.title("Webapp for tl Parser")
     main_bg = "4397636.jpg"
