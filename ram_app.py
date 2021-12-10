@@ -73,7 +73,7 @@ class Timespent:
 
             else:
               st.write('Could not parse time in line '+str(line_number))
-          st.write("Total time author spent : " + str(timeElapsedInMinutes//60) +" hrs " + str(timeElapsedInMinutes%60) + " minutes")
+       st.write("Total time author spent : " + str(timeElapsedInMinutes//60) +" hrs " + str(timeElapsedInMinutes%60) + " minutes")
 if __name__ == '__main__':
     st.title("Webapp for tl Parser")
     main_bg = "4397636.jpg"
