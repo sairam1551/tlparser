@@ -71,12 +71,11 @@ if __name__ == '__main__':
     main_bg = "4397636.jpg"
     main_bg_ext = "jpg"
     st.markdown(
-    f"""
-    <style>
-    .reportview-container {{
-        background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
-    }}
-    </style>""",
+    """
+    <div style="background-color:tomato;padding:10px">
+    <h2 style="color:white;text-align:center;">Time Log Parser App </h2>
+    </div>
+    """,
     unsafe_allow_html=True
     )
 
