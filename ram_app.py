@@ -66,7 +66,6 @@ class Timespent:
         else:
             st.write("Time Log not in the file : ", fname)
 if __name__ == '__main__':
-    st.sidebar.write("Welcome to the web app")
     st.title("Webapp for tl Parser")
     main_bg = "4397636.jpg"
     main_bg_ext = "jpg"
@@ -82,7 +81,8 @@ if __name__ == '__main__':
 
     file = st.file_uploader(" Upload the TimeLog file here")
     if st.button("Generate"):
-        line = str(file.read(),"utf-8")
+        filename = str(file.read(),"utf-8")
+        line = os.path.basename(filename)
         call_data = Timespent()
         file_data  = call_data.fileRead(inputFilename =line)
         call_data.main(Data_i=file_data)
