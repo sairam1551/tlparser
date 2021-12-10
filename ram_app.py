@@ -38,10 +38,10 @@ class Timespent:
             return "N"
     def main(Data_i):
        workTime = re.compile(r'((\d{0,1})\d:\d\d)(am|pm)( )*-( )*((\d{0,1})\d:\d\d)(am|pm)')
-        timeElapsedInMinutes = 0
-        flag = True
-        line_number = 0;
-        for line in Data_i:
+       timeElapsedInMinutes = 0
+       flag = True
+       line_number = 0;
+       for line in Data_i:
             line_number += 1
             if (line.find("Time Log") != -1):
               flag = False
