@@ -81,10 +81,7 @@ if __name__ == '__main__':
 
     file = st.file_uploader(" Upload the TimeLog file here")
     if st.button("Generate"):
-        filename = str(file.read(),"utf-8")
-        from pathlib import Path
-        line = Path(filename).stem
+        line = str(file.read(),"utf-8")
         call_data = Timespent()
-        file_data  = call_data.fileRead(inputFilename =line)
-        call_data.main(Data_i=file_data)
+        call_data.main(Data_i=line)
 
