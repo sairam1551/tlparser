@@ -44,8 +44,6 @@ class Timespent:
             if ldata.strip('\n').count("Time Log"):
                 cl_initial = currentline
                 break
-            else:
-                cl_initial = 'TimeLog'
         if cl_initial != "TimeLog":
             for iv in range(int(cl_initial), len(Data_i)):
                 fsd = (Data_i[iv].split(' - ')[0].split())
