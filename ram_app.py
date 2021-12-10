@@ -37,7 +37,7 @@ class Timespent:
         except ValueError:
             return "N"
     def main(self,Data_i):
-        cl_initial = '4769'
+        cl_initial = ''
         ftd = []
         for currentline, ldata in enumerate(Data_i):
             if ldata.strip('\n').count("Time Log"):
@@ -46,7 +46,7 @@ class Timespent:
             else:
                 cl_initial = 'TimeLog'
         if cl_initial != "TimeLog":
-            for iv in range(int(cl_initial), len(Data_i)):
+            for iv in range(0, 69):
                 fsd = (Data_i[iv].split(' - ')[0].split())
                 ssd = (Data_i[iv].split(' - ')[1:])
                 counter = (Data_i[iv].split(' - ')[1:])
