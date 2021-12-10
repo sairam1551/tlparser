@@ -37,7 +37,7 @@ class Timespent:
         except ValueError:
             return "N"
     def main(self,Data_i):
-        cl_initial = ''
+        cl_initial = '0'
         ftd = []
         for currentline, ldata in enumerate(Data_i):
             if ldata.strip('\n').count("Time Log"):
