@@ -36,7 +36,7 @@ class Timespent:
             return "Y"
         except ValueError:
             return "N"
-    def main(Data_i):
+    def main(self,Data_i):
        workTime = re.compile(r'((\d{0,1})\d:\d\d)(am|pm)( )*-( )*((\d{0,1})\d:\d\d)(am|pm)')
        timeElapsedInMinutes = 0
        flag = True
