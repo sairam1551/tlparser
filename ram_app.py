@@ -23,7 +23,7 @@ class Timespent:
         seconds = time_tot_author.total_seconds()
         minutes, seconds = divmod(seconds, 60)
         hours, minutes = divmod(minutes, 60)
-        print("Total time taken to complete (HH:MM:SS) : %d:%02d:%02d" % (hours, minutes, seconds))
+        st.write("Total time taken to complete (HH:MM:SS) : %d:%02d:%02d" % (hours, minutes, seconds))
     def fileRead(self,inputFilename):
         data_o = []
         Data_i = open(inputFilename, "r")
@@ -57,7 +57,6 @@ class Timespent:
                 else:
 
                     st.write("No time stamp present in the line: ", iv + 1)
-                    st.write(ftd)
             self.TimeTotal(ftd)
         else:
             st.write("Time Log not in the file : ", Data_i)
