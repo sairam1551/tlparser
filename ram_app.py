@@ -42,9 +42,9 @@ class Timespent:
         colist = Data_i.split("\n");
         if cl_initial != "TimeLog":
             for iv in range(int(cl_initial), len(colist)):
-                fsd = (Data_i[iv].split(' - ')[0].split())
-                ssd = (Data_i[iv].split(' - ')[1:])
-                counter = (Data_i[iv].split(' - ')[1:])
+                fsd = (colist[iv].split(' - ')[0].split())
+                ssd = (colist[iv].split(' - ')[1:])
+                counter = (colist[iv].split(' - ')[1:])
                 if len(fsd) != 0:
                     timeformatstatus = self.timechange(fsd[-1].strip())
                     if len(counter) != 0:
