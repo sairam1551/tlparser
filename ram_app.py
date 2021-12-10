@@ -62,7 +62,7 @@ class Timespent:
             st.write("Time Log not in the file : ", Data_i)
 if __name__ == '__main__':
     st.title("Webapp for tl Parser")
-    main_bg = "4397636.jpg"
+    main_bg = "main.jpg"
     main_bg_ext = "jpg"
     st.markdown(
     f"""
