@@ -3,6 +3,7 @@ import datetime
 import time
 import streamlit as st
 import base64
+import re
 
 class Timespent:
     def TimeTotal(self,time_data):
