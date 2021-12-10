@@ -38,7 +38,7 @@ class Timespent:
         except ValueError:
             return "N"
     def main(self,Data_i):
-        cl_initial = 1
+        cl_initial = '2/23/12: 9:10pm - 11:40pm getting familiar with Flash'
         ftd = []
         for currentline, ldata in enumerate(Data_i):
             if ldata.strip('\n').count("Time Log"):
