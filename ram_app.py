@@ -63,7 +63,7 @@ class Timespent:
                     st.write("No time stamp present in the line: ", iv + 1)
             self.TimeTotal(ftd)
         else:
-            st.write("Time Log not in the file : ", fname)
+            st.write("Time Log not in the file : ", line)
 if __name__ == '__main__':
     st.title("Webapp for tl Parser")
     main_bg = "4397636.jpg"
